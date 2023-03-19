@@ -1,3 +1,3 @@
 # DI_Bootcamp
-Learning project
+Learning project.
 Everyweek a lot of exercises
