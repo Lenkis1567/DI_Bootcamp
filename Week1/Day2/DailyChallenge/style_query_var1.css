@@ -1,13 +1,18 @@
 * {
     margin: 0px; 
     padding: 0;
-    font-family: "Roboto Slab"; 
-    color:rgb(24, 31, 224);
+    font-family: "Times New Roman"; 
   }
+
+h1 {
+    font-size: 60px;
+}
+
+
   header {
       font-family: 'Roboto Slab', serif;
       font-size: 20px;
-      background-color: white;
+      background-color: rgb(7, 7, 7);
       width: 100vw;
       height: 50px;
       text-decoration: none;
@@ -35,7 +40,6 @@
   }
   span {
       display: inline-block; 
-      color:rgb(3, 4, 34);
       padding: 12px 50px 0 0;
       font-family: "Roboto Slab";
       font-weight: bold;
@@ -43,11 +47,9 @@
 
 span a {
     text-decoration: none;
-    
+    color:rgb(230, 224, 224);
 }
-span a:hover {
-    background-color: rgb(218, 94, 12);
-  }
+
 h1 {
     padding-top: 30px;
     font-size: 50px;
@@ -59,11 +61,7 @@ h1 {
     padding: 15px 15px 15px 15px;
     color: black;
 }
-#products {
-    height: 500px;
-    background-image: url("background.jpg");
-    background-size: cover;
-}
+
 .footer {
     position: fixed;
     left: 0;
@@ -76,4 +74,44 @@ h1 {
   .footer span {
     color:rgb(24, 31, 224);
   }
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 35px;
+    }
+    header {
+        background-color: yellow;
+    }
+    span a {
+        color: black;
+        font-size: 14px;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+     .wrapper div:first-child {
+        order: 1;}
+    }
   
+  @media screen and (min-width: 601px) 
+  and (max-width: 768px) {
+    h1 {
+      font-size: 25px;
+    }
+    header {
+        background-color: rgb(13, 214, 30);
+    }
+    span a {
+        color: black;
+    }
+  }
+  @media screen and (min-width: 769px) 
+  and (max-width: 992px) {
+
+    header {
+        background-color: rgb(250, 34, 6);
+    }
+    span a {
+        color: white;
+    }
+  }
