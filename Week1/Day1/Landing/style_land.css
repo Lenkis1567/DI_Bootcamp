@@ -1,0 +1,55 @@
+* {
+  margin: 0px; 
+  padding: 0;
+  font-family: "Roboto Slab"; 
+}
+header {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    background-color: rgb(7, 7, 7);
+    width: 100vw;
+    height: 50px;
+    border: 1px solid black;
+    color: white;
+}
+body {
+    
+}
+#logo {
+    display: inline-block;
+    padding-right:0px;
+    padding-left:50px;
+    margin: 0px;
+    padding-top:5px;
+}
+
+#menu{
+    float:right;
+    width: 50vw;
+    text-align: right;
+}
+#img {
+    overflow: hidden;
+}
+header img {width: 38px;
+}
+span {
+    display: inline-block; 
+    color:white;
+    padding: 9px 50px 0 0;
+}
+h1 {
+    font-size: 50px;
+}
+#thor {
+padding-top: 200px;
+    padding-left: 10vw;
+    padding-right: 25vw;
+    background-image: url("background.jpg");
+    background-size: cover;
+}
+#son {
+    font-size: 14px;
+    width: 45%;
+    padding-top:15px;
+}
