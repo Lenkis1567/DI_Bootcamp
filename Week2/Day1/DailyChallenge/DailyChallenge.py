@@ -1,4 +1,3 @@
-
 a = input('Please write a string. The string must be 10 characters long: ')
 letters = len(a)
 
@@ -7,12 +6,15 @@ if letters < 10:
 if letters > 10:
     print ('string too long')
 if letters == 10:
-    print ('great!')
+    print ('great!vexactly 10 simbols')
     print(a[0])
-    print(a[9]+ "       ")
-for num in range(0, 10):
-    print(a[num])
-    num=num+1
+    print(a[9])
+
+b=""
+for num1 in range(0, 10):
+    b=b+a[num1]
+    print(b)
+    num1=num1+1
 
 import random
 spisok = list(a)
