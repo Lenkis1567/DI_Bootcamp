@@ -6,9 +6,9 @@ if letters < 10:
 if letters > 10:
     print ('string too long')
 if letters == 10:
-    print ('great!vexactly 10 simbols')
-    print(a[0])
-    print(a[9])
+    print ('great! exactly 10 simbols')
+    print ("First:", a[0])
+    print ("Last:", a[9])
 
 b=""
 for num1 in range(0, 10):
@@ -20,4 +20,5 @@ import random
 spisok = list(a)
 print(spisok)
 random.shuffle(spisok)
-print(spisok)
+spisok1=''.join(spisok)
+print(spisok1)
