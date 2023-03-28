@@ -102,18 +102,18 @@ print("You will have to pay: ", price)
 
 
 #--------------------10------------------------
-final_list = []
-teenagers = input("please write your names, separate them with space: ")
-teenagers_st = teenagers.split ()
-print (teenagers_st)
-num11 = len(teenagers_st)
-print (num11)
-for n in range (0, num11+1):
-    current_name = teenagers_st[n]
-    print (current_name, ",")
-    age = input("Tell me your age: ",)
-    age_int = int(age)
-    if age_int < 16 or age_int > 21:
-        final_list.append(current_name)
+# eligable = []
+# teenagers = [Ron, John, Mary, Bill]
+# teenagers_info = []
+# ages = []
+# for teenager in teenagers:
+#     age = input(f"Hi, {teenager}, Tell me your age: ")
+#     age_int = int(age)
+#     info = (teenager, age_int)
+#     teenagers_info.append(info)
 
-print(final_list)
+#     if age_int > 16 and age_int < 21:
+#         continue
+#     eligable.append(name)
+
+# print(eligable)
