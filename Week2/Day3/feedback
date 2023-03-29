@@ -1,0 +1,26 @@
+You did a great job with the first daily challage!
+i saw you didnt do the second daily challenge so ill provide you with some hints...
+
+def affordable_items(items_purchase, wallet):
+    # Convert wallet to a float without the dollar sign
+    wallet_amount = float(wallet[1:].replace(',', ''))
+    
+    # Create an empty list to store affordable items
+    affordable_items = []
+    
+    # Check each item in items_purchase
+    for item, price in items_purchase.items():
+        # Convert the price to a float without the dollar sign and commas
+        item_price = float(price[1:].replace(',', ''))
+        if item_price <= wallet_amount:
+            affordable_items.append(item)
+    
+Now try doing the last 2 steps by urself which are:    
+    
+    # Sort the affordable_items list in alphabetical order
+   
+    
+    # Return the list or "Nothing" if the list is empty
+    
+Goodluck! we can go through it together tomorrow at the session if you desire.
+
