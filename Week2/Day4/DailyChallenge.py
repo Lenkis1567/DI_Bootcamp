@@ -13,7 +13,7 @@ nonalfa = 0
 for y1 in range(0,y):
     for i1 in range(0,i):
         sentence1.append(matrix[i1][y1])
-    # print(sentence1)
+    
 for z in sentence1:
     if z.casefold() in alfa:
         sentence_result.append(z)
@@ -23,7 +23,6 @@ for z in sentence1:
         if nonalfa == 2:
             sentence_result.append(" ")
     
-
 print("".join(sentence_result))   
 
 
