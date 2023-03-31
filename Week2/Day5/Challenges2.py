@@ -3,13 +3,13 @@ def selk1(n:int, level=1):
         print(" "*n,"*"*(level))
         selk1(n-1, level+1)
 
-selk1(5)
+selk1(8)
 
 def selk(l:int):
     for i in range(1,l+1):
         print(" "*(l-i),"*"*i)
 
-selk(3)
+selk(7)
 
 def simm(n:int, level = 1):
     if n>0:
@@ -35,6 +35,7 @@ for i in range(len(my_list) - 1):
             if(minimum != i):
                 my_list[i], my_list[minimum] = my_list[minimum], my_list[i]
 print(my_list)
+#---------------------
 # took list, 
 # 1) i = 0 minimum = 0 (loop form 0 to n-1)
 # 2) j = 1 (loop from 1 to n)
