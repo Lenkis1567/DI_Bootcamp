@@ -9,7 +9,7 @@ class Family:
         self.members.append(new_member)
         if 0<new_member["age"]<7:
             new_member['is_child'] = True
-            print('Congratulations!')
+            print(f'Congratulations with {new_member["name"]}!')
         else:
             new_member['is_child'] = False
     def is_18(self, old_guy):
