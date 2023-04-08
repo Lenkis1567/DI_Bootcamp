@@ -1,0 +1,13 @@
+body {
+    background-image: url('img_girl.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+h3 {
+    color: rgb(245, 245, 248);
+    text-align: center;
+    background: blue;
+
+}

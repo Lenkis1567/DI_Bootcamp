@@ -101,24 +101,43 @@
 
 
 
-#--------------------9 add------------------------
-# eligable = []
-teenagers = ["Ron", "John", "Mary", "Bill"]
-teenagers_info = []
-ages = []
-for teenager in teenagers:
-    age = input(f"Hi, {teenager}, Tell me your age: ")
-    age_int = int(age)
-    info = (teenager, age_int)
-    teenagers_info.append(info)
-permitted = []
-for name, age in teenagers_info:
-    if age > 16 and age< 21:
-        continue
+# #--------------------9 add------------------------
+# # eligable = []
+# teenagers = ["Ron", "John", "Mary", "Bill"]
+# teenagers_info = []
+# ages = []
+# for teenager in teenagers:
+#     age = input(f"Hi, {teenager}, Tell me your age: ")
+#     age_int = int(age)
+#     info = (teenager, age_int)
+#     teenagers_info.append(info)
+# permitted = []
+# for name, age in teenagers_info:
+#     if age > 16 and age< 21:
+#         continue
+#     else:
+#         permitted.append(name)
+
+# print(teenagers_info)
+# print("They can enter:", permitted)
+
+# ===============Sandwich Orders==========================
+sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Egg sandwich", "Pastrami sandwich", "Sabih sandwich", "Pastrami sandwich"]
+sandwich_orders_without_p=[]
+finished_sandwiches = []
+print("Sorry, we ran our of pastrami, so today no sandwiches with it. We will remove them from our menu, you can try those:")
+for b in range(0,len(sandwich_orders)):
+    if sandwich_orders[b]!="Pastrami sandwich":
+        sandwich_orders_without_p.append(sandwich_orders[b])
+print(sandwich_orders_without_p)
+for n in range(0, len(sandwich_orders_without_p)):
+    a = input(f'Is the {sandwich_orders_without_p[n]} is done? Print Yes, if so, else print No ')
+    ap=a.upper()
+    if ap == "YES":
+         finished_sandwiches.append(sandwich_orders_without_p[n])
+
+for i in range(0, len(finished_sandwiches)):
+    if finished_sandwiches!=[]:
+        print(f'I"ve done your {finished_sandwiches[i]}')
     else:
-        permitted.append(name)
-
-print(teenagers_info)
-print("They can enter:", permitted)
-
-# NOt done
+        print("Nothing for you today")    
