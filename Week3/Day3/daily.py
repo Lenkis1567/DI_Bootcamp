@@ -14,7 +14,6 @@ class Circle:
     #         self.radius = size/2
     #         self.diameter = diameter
     
-       
 
     @classmethod
     def from_diameter(cls, diameter:float):
