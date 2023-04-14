@@ -1,3 +1,5 @@
+
+# =====Exercise 3: String module===============
 import random
 import string
 from func import adding
@@ -13,8 +15,11 @@ for i in range(0,4):
     al = random.randint(0,51)
     l+=list_alph[al]
 print(l)
-
-# ==============================
+# ============Exercise 4 : Current Date==================
+from datetime import date
+today = date.today()
+print(today)
+# ============Exercise 5 : Amount of time left until January 1st==================
 from datetime import date
 
 def till_ny():
@@ -28,7 +33,7 @@ def till_ny():
     print(f"NY is in {tdays} days.")
 
 till_ny()
-# ===================== Birthday and minutes=================
+# ===================== 6 Birthday and minutes=================
 def life_days():
     import datetime
     today = datetime.datetime.now()
@@ -43,7 +48,7 @@ def life_days():
     print(f"You lived {a} minutes")
 
 life_days()
-# =================Upcoming Holiday===============================
+# =================7 Upcoming Holiday===============================
 def holiday_time():
     import datetime
     today = datetime.datetime.today()
@@ -66,14 +71,15 @@ print(age_anotherplanet(age,planet))
 from faker import Faker
 fake = Faker()
 users=[]
-user={}
+
 quantity=int(input("How many people do you need? "))
 for i in range (0,quantity):
+    user={}
     user["Name"]= fake.unique.name()
     user["Address"]=fake.address()
     user["Langage code"]="eng"
     users.append(user)
-    user={}
+
 print(users)
 
 
