@@ -21,13 +21,12 @@ class MenuManager:
                 print (self.menu)
                 n=True
                 break
-
         return n
     # # – if the item is in the menu, this function should remove it from the menu. If the item was not in the menu, return False. 
 
 
-a=MenuManager()
-a.add_item("Apple", 5)
+# a=MenuManager()
+# a.add_item("Apple", 5)
 # item=input("food: ")
 # print(a.remove_item(item))
 
