@@ -33,7 +33,7 @@
 
 -- select *
 -- from students 
--- where first_name like 'A%';
+-- where lower(first_name) like 'a%';
 
 -- select *
 -- from students 
