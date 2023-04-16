@@ -41,7 +41,7 @@
 
 -- select *
 -- from students 
--- where first_name like '%a' or first_name like '%a_';
+-- where first_name like '%a_';
 
 -- select first_name, last_name
 -- from students 
