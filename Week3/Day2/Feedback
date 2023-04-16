@@ -1,0 +1,22 @@
+Hi Elena,
+in exercises 2 you get the error:
+
+
+ line 41, in incredible_presentation
+    print (f'Name: , {one_person["name"]}, power: {one_person ["incredible_name"]}')
+KeyError: 'incredible_name'
+
+The error is raised because in the Incredibles class self_members list, 
+the key 'incredible_name' is used, but in the incredible_presentation method,
+the key used is 'incredible_name' instead of 'incredible_name'.
+
+To fix this error, you can change the key used in the incredible_presentation method to 'incredible_name' as follows:
+print (f'Name: {one_person["name"]}, power: {one_person["incredible_name"]}')
+
+Also, when creating a new member in the Incredibles class, you should use
+self.members.append(new_member) instead of self_members.append(new_member) to add the new member to
+the list of members of the Family class.
+
+hope this helps!
+
+
