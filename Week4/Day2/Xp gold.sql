@@ -61,8 +61,28 @@
 -- sum(math_grade)
 -- from students
 -- ==================Exercise 3 : Items and customers======
-create table purchases (
-id serial primary key,
-customer_id int references customers(id),
-item_id int references items(id),
-quantity_purchased integer)
+-- create table purchases (
+-- id serial primary key,
+-- customer_id int references customers(id),
+-- item_id int references items(id),
+-- quantity_purchased integer)
+
+-- insert into purchases(customer_id, item_id, quantity_purchased)
+-- select
+-- 	(select id from customers where personal_name='Scott') as t1, 
+-- 	(select id from items where name_item='Fan') as t2,
+-- 	8;
+
+-- insert into purchases(customer_id, item_id, quantity_purchased)
+-- values
+-- 	(5, 2, 10),
+-- 	(1, 1, 2)
+-- ;
+
+select item_id, name_item, sum(purchases.quantity_purchased) 
+from purchases 
+join
+items
+on purchases.item_id = items.id
+group by item_id, name_item;
+
