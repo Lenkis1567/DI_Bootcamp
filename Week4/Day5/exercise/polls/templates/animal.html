@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{{header}}</title>
+    {% load static %}
+    <link href="{% static './css/' %}example.css" rel="stylesheet">
+</head>
+<body>
+    <h2>{{ header }}:</h2>
+    {% for key, value in message.items %}
+        {% if key != 'name' %}
+            {% if key == 'family' %}
+                <p><a href=/family/{{value}}>{{key|title}}: {{value}}</a> </p>
+            {% elif key == "url" %} 
+                <img src="{% static './' %}{{value}}" alt=" " style = 'width:250px'>
+            {% else %}
+                <p>{{key|title}}: {{value}}</p>
+            {% endif %} 
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
