@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+
+    <h2>{{ header }}:</h2>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Details</th>
+            <th scope="col">Category</th>
+            <th scope="col">Done</th>
+            <th scope="col">Date of creation</th>
+            <th scope="col">Date of completion</th>
+            <th scope="col">Deadline</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{message.title }}</th>
+            <td>{{message.details}}</td>
+            <td>{{messagecategory}}</td>
+            <td>{{message.done}}</td>
+            <td>{{message.date_creation}}</th>
+            <td>{{message.date_completion}}</th>
+            <td>{{message.deadline_date}}</th>
+
+          </tr>
+        </tbody>
+      </table>
+
+
+{% endblock %}
+

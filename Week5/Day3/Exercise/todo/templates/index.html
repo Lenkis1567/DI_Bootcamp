@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+
+    <h2>{{ header }}:</h2>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Details</th>
+            <th scope="col">Category</th>
+            <th scope="col">Done</th>
+            <th scope="col">Date of creation</th>
+            <th scope="col">Date of completion</th>
+            <th scope="col">Deadline</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for i in message  %} 
+          <tr>
+            <td><a href="/todos/{{i.id}}">{{ i.title }} </a></th>
+            <td>{{i.details}}</td>
+            <td>{{i.category}}</td>
+            <td>{{i.done}}</td>
+            <td>{{i.date_creation}}</th>
+            <td>{{i.date_completion}}</th>
+            <td>{{i.deadline_date}}</th>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+
+
+{% endblock %}
+
