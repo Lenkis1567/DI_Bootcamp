@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+
+    <h2>{{ header }}:</h2>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Number</th>
+            <th scope="col">Rental date</th>
+            <th scope="col">Return date</th>
+            <th scope="col">Customer</th>
+            <th scope="col">Vehicle</th>
+          </tr>
+        </thead>
+        <tbody>
+
+            {% for i in message  %} 
+            
+          <tr>
+            <td><a href="/rentals/{{i.id}}">{{ i.id }} </a></td>
+            <td>{{i.rental_date}}</td>
+            <td>{{i.return_date}}</td>
+            <td><a href="/customers/{{i.customer.id}}">{{i.customer.first_name}} {{i.customer.last_name}}</a></td>
+            <td><a href="/vehicles/{{i.vehicle.id}}">{{i.vehicle.vehicle}}, {{i.vehicle.size}}</a_href></td>
+          </tr>
+          
+          {%endfor%}
+        </tbody>
+      </table>
+
+
+{% endblock %}

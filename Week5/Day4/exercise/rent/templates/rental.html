@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ header }}:</h2>
+<br>
+<h5><b>Rental date:</b> {{message.rental_date}}</h5>
+<h5><b>Return date:</b> {{message.return_date}}</h5>
+<h5><b>Customer:</b> <a href="/customers/{{message.customer.id}}">{{message.customer.first_name}} {{message.customer.last_name}}</a></h5>
+<h5><b>Vehicle:</b> <a href="/customers/{{message.vehicle.id}}">{{message.vehicle.vehicle}}, {{message.vehicle.size}} size</a></h5>
+
+{% endblock %}
+
+

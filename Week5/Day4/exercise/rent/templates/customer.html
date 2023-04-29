@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ header }}:</h2>
+
+<h5>Mail: {{message1.email}}</h5>
+<h5>Phone: {{message1.phone_number}}</h5>
+<h5>Address: {{message1.address}}</h5>
+<h5>City: {{message1.city}}</h5>
+<h5> Country: {{message1.country}}</h5>
+<h5> Rentals: {{message2}}</h5>
+
+{% endblock %}
+
+

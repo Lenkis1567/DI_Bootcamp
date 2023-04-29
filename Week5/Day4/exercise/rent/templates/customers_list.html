@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+
+    <h2>{{ header }}:</h2>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">Country</th>
+          </tr>
+        </thead>
+       
+    
+        <tbody>
+
+            {% for i in message  %} 
+            
+          <tr>
+            <td><a href="/customers/{{i.id}}">{{ i.first_name }} </a></td>
+            <td>{{i.last_name}}</td>
+            <td>{{i.email}}</td>
+            <td> {{i.phone_number}}</td>
+            <td>{{i.address}}</td>
+            <td>{{i.city}}</td>
+            <td>{{i.country}}</td>
+          </tr>
+          
+          {%endfor%}
+        </tbody>
+      </table>
+
+
+{% endblock %}
