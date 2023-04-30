@@ -8,8 +8,10 @@
 <h5>Address: {{message1.address}}</h5>
 <h5>City: {{message1.city}}</h5>
 <h5> Country: {{message1.country}}</h5>
-<h5> Rentals: {{message2}}</h5>
-
+<h5> Rentals: </h5>
+    {%for i in message2 %}
+    <h6>Dates: {{i.rental_date}} - {{i.return_date}}, name: {{i.vehicle.vehicle}}, size: {{i.vehicle.size}}, date of creation: {{i.vehicle.date_created}}</h6>
+{% endfor %}
 {% endblock %}
 
 
