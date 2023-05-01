@@ -17,4 +17,11 @@ class Animals(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Post(models.Model):
+        title=models.CharField()
+
+    def __str__(self):
+        print(self.title)    
+        
 

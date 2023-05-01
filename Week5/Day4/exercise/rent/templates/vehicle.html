@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ header }}:</h2>
+
+<h5>Date of creation: {{message.date_created}}</h5>
+<h5>Cost: {{message.real_cost}}</h5>
+<h5>Size: {{message.size}}</h5>
+<h5>Rentals: </h5>
+    {%for i in message1 %}
+    <h6>Dates: {{i.rental_date}} - {{i.return_date}}, customer: {{i.customer.first_name}} {{i.customer.last_name}}</h6>
+    {% endfor %}
+<h5>Status for now: {{message2}}</h5>    
+
+{% endblock %}

@@ -21,7 +21,7 @@ class Vehicle(models.Model):
 class Customer(models.Model):
     first_name=models.CharField(max_length=200, blank =False)
     last_name=models.CharField(max_length=200)
-    email=models.EmailField()
+    email=models.EmailField(unique=True)
     phone_number=models.CharField()
     address=models.CharField()
     city=models.CharField(max_length=200)
@@ -31,11 +31,11 @@ class Customer(models.Model):
     
 class Rental(models.Model):
     rental_date=models.DateField(blank =False)
-    return_date=models.DateField(blank =False)
+    return_date=models.DateField(null=True, blank=True)
     customer=models.ForeignKey(Customer, on_delete=models.CASCADE)
     vehicle=models.ForeignKey(Vehicle, on_delete=models.CASCADE)
     def __str__(self):
-       return f'{self.rental_date} {self.return_date} {self.customer} {self.vehicle}'
+       return f'{self.rental_date} {self.return_date} {self.customer.last_name} {self.vehicle}'
 
 
     
