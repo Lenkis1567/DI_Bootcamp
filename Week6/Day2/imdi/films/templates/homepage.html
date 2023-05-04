@@ -7,14 +7,14 @@
 <div class="row">
 {% for film, directors, countries in messages %}
     <div class="col mb-4">
-        <div class="card" style="width: 18rem; min-height: 450px;">
+        <div class="card" style="width: 18rem; min-height: 300px;">
             <div class="card-body">
-                <h5 class="card-title">{{film}} </h5>
-                <p class="card-text">Director</p>
+                <h5 class="card-title">{{film.title}} </h5>
+                <p class="card-text">Director:</p>
             {% for director in directors %}
                 <h6 class="card-subtitle mb-2 text-body-secondary">{{director}}</h6>
             {%endfor%}
-        <p class="card-text">Avialible in countries:</p>
+        <p class="card-text">Categories:</p>
         {%for country in countries%}
 
             <h6 class="card-subtitle mb-2 text-body-secondary">{{country}}</h6>

@@ -10,14 +10,17 @@ def films(request):
     films_all=Film.objects.all()
     directors = []
     country_films = []
+    categories =[]
 
     for film in films_all:  
         dir_film=film.director_v.all()
         country_film=film.available_in_countries.all()
+        category=film.category_v.all()
         directors.append(dir_film)
         country_films.append(country_film)
+        categories.append(category)
 
-    all_films_dir = zip(films_all, directors, country_films)
+    all_films_dir = zip(films_all, directors, categories)
     print(all_films_dir)
     context={"header": "Films", "messages": all_films_dir}
     return render(request, 'homepage.html', context)
