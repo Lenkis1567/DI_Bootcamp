@@ -13,6 +13,7 @@
                 <p class="card-text">Director:</p>
             {% for director in directors %}
                 <h6 class="card-subtitle mb-2 text-body-secondary">{{director}}</h6>
+                <a href="/edit_director/{{director.pk}}" class="card-link">Modify director</a>
             {%endfor%}
         <p class="card-text">Categories:</p>
         {%for country in countries%}
@@ -21,8 +22,9 @@
             
         {%endfor%}
     
-      
-        <a href="/add_film" class="card-link">Add film</a>
+
+
+     <!--   <a href="/add_director" class="card-link">Modify director</a>-->
 
             </div>
         </div>

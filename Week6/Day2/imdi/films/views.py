@@ -1,9 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Country, Director, Film, Category
 from .forms import DirectorForm, FilmForm
 import json
 from datetime import date
+from django.views.decorators.http import require_GET, require_POST
+
 
 
 def films(request):
@@ -37,7 +39,7 @@ def add_film(request):
         film_filled_form=FilmForm(request.POST)
         if film_filled_form.is_valid():
             film_filled_form.save()
-            context={'header': 'Saved'}
+            return redirect('/homepage')
 
     return render(request, 'add_film.html', context)
 
@@ -53,6 +55,23 @@ def add_director(request):
         director_filled_form=DirectorForm(request.POST)
         if director_filled_form.is_valid():
             director_filled_form.save()
-            context={'header': 'Saved'}
+            return redirect('/homepage')
 
     return render(request, 'add_director.html', context)
+
+
+def edit_director(request, pk):
+    director=Director.objects.get(id=pk)
+    director_form = DirectorForm(instance=director)
+    if request.method == "GET":
+        context={"header": "Edit info about the director", "form": director_form}
+        return render(request, 'add_director.html', context)
+    
+    if request.method =="POST":
+        director_filled_form=DirectorForm(request.POST, instance=director)
+        print(director_filled_form)
+        if director_filled_form.is_valid():
+            director_filled_form.save()
+        return redirect('/homepage')
+
+
