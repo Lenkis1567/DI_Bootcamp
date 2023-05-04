@@ -74,4 +74,17 @@ def edit_director(request, pk):
             director_filled_form.save()
         return redirect('/homepage')
 
+def edit_film(request, id):
+    film=Film.objects.get(id=id)
+    film_form = FilmForm(instance=film)
+    if request.method == "GET":
+        context={"header": "Edit info about the film", "form": film_form}
+        return render(request, 'add_film.html', context)
+    
+    if request.method =="POST":
+        film_filled_form=FilmForm(request.POST, instance=film)
+        print(film_filled_form)
+        if film_filled_form.is_valid():
+            film_filled_form.save()
+        return redirect('/homepage')
 
