@@ -5,7 +5,8 @@ from .forms import DirectorForm, FilmForm
 import json
 from datetime import date
 from django.views.decorators.http import require_GET, require_POST
-
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login, logout
 
 
 def films(request):
@@ -87,4 +88,28 @@ def edit_film(request, id):
         if film_filled_form.is_valid():
             film_filled_form.save()
         return redirect('/homepage')
+# ==============
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        print(form)
+        
+        if form.is_valid():
+            form.save()
+            username=form.cleaned_data['username']
+            password=form.cleaned_data['password1']
+            user=authenticate(username = username, password=password)
+            print(user)
+            login(request, user)
+            return redirect ('homepage')
+        else:
+            print('error')
+    else:    
+        form=UserCreationForm
+     
+    context={'form':form}
+    return render(request, 'registration/register.html', context)
 
+def logout_f(request):
+    logout(request)
+    return redirect('homepage')
