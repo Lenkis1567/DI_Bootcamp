@@ -97,6 +97,8 @@ def register(request):
         if form.is_valid():
             form.save()
             username=form.cleaned_data['username']
+            # firstname=form.cleaned_data['first_name']
+            # mail=form.cleaned_data['email']
             password=form.cleaned_data['password1']
             user=authenticate(username = username, password=password)
             print(user)
