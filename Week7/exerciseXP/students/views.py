@@ -11,6 +11,8 @@ from rest_framework.status import (HTTP_200_OK,
                                    HTTP_202_ACCEPTED,
                                    HTTP_204_NO_CONTENT,
                                    HTTP_400_BAD_REQUEST)
+# from rest_framework.generics import GenericAPIVIew, ListAPIView
+
 
 class StudentView(APIView):
     
@@ -25,12 +27,17 @@ class StudentView(APIView):
             except Student.DoesNotExist:
                 return Response({"detail": "Student not found"}, status=HTTP_400_BAD_REQUEST)
         else:
-            queryset = Student.objects.all()
-            serializer = StudentSerializer(queryset, many=True)
+            date_joined_param = request.GET.get('date_joined')
+            if date_joined_param:
+                queryset = Student.objects.filter(date_joined=date_joined_param)
+                serializer = StudentSerializer(queryset, many=True)
+            else:
+                queryset = Student.objects.all()
+                serializer = StudentSerializer(queryset, many=True)
         return Response(serializer.data, status=HTTP_200_OK)
     
     def post(self, request, *args, **kwargs):
-
+        print("************************",request.data)
         serializer = StudentSerializer(data=request.data)
 
         if serializer.is_valid():
