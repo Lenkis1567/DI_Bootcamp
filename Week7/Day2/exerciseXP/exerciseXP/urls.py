@@ -17,7 +17,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from work.views import DepartmentListAPIView, EmployeeListAPIView, DepartmentRetrieveAPIView, ProjectListAPIView, ProjectUpdateAPIView, ProjectDestroyAPIView, TaskRetrieveAPIView, TaskDestroyAPIView, TaskListAPIView
+from work.views import DepartmentListAPIView, EmployeeListAPIView, DepartmentRetrieveAPIView, ProjectListAPIView, ProjectUpdateAPIView, ProjectDestroyAPIView, TaskViewSet, router
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,12 +25,15 @@ urlpatterns = [
     path('api/departments/', DepartmentListAPIView.as_view(), name='deplist'),
     path('api/employees/', EmployeeListAPIView.as_view(), name='emplist'),
     path('api/departments/<int:pk>/', DepartmentRetrieveAPIView.as_view(), name='dept'),
-    path('api/projects/', ProjectListAPIView.as_view(), name='projects'),
-    path('api/projects/<int:pk>/', ProjectUpdateAPIView.as_view(), name='pr_upd'),
+    path('api/projects/', ProjectListAPIView.as_view(), name='proj'),
+    path('api/projects/<int:pk>/', ProjectUpdateAPIView.as_view(), name='projects'),
     path('api/projects/<int:pk>/destr', ProjectDestroyAPIView.as_view(), name='pr_dest'),
-    path('api/task/<int:pk>/', TaskRetrieveAPIView.as_view(), name='task'),
-    path('api/task/<int:pk>/destr', TaskDestroyAPIView.as_view(), name='task_dest'),
-    path('api/tasks/', TaskListAPIView.as_view(), name='tasks'),
-
+    # path('api/task/<int:pk>/', TaskRetrieveAPIView.as_view(), name='task'),
+    # path('api/task/<int:pk>/destr', TaskDestroyAPIView.as_view(), name='task_dest'),
+    # path('api/tasks/', TaskListAPIView.as_view(), name='tasks'),
+    # path('api/tasks/', TaskViewSet.as_view({'get': 'list'})),
+    # path('api/tasks/<int:pk>/', TaskViewSet.as_view({'put': 'update'}))
+    path('api/', include(router.urls), name='task')
+    
 ]
 

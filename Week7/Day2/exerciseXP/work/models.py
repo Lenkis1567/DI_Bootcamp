@@ -1,8 +1,10 @@
 from django.db import models
+from rest_framework import permissions
 
 class Department(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(max_length=500, blank=True)
+    admin = models.OneToOneField('auth.User', related_query_name='user', on_delete=models.CASCADE, null=True)
     def __str___(self):
         return f'{self.name} {self.description}'
     
@@ -15,6 +17,7 @@ class Employee(models.Model):
         return f'{self.name}'
 
 class Project(models.Model):
+   
     name = models.CharField(max_length=100)
     description = models.TextField(max_length=500, null=True, blank=True)
     start_date = models.DateField()
