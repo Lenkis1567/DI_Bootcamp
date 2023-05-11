@@ -1,0 +1,7 @@
+{%extends 'base.html'%}
+
+{%block content%}
+{%for i in person%}
+<p>{{i.name}}, {{i.phone_number}}, {{i.address}}</p>
+{%endfor%}
+{% endblock %}
