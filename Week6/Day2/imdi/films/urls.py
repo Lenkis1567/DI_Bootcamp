@@ -9,6 +9,7 @@ urlpatterns = [
     path('edit_film/<int:id>', views.edit_film, name='edit_film'),
     path('edit_director/<int:pk>', views.edit_director, name='edit_director'),
     path('register', views.register, name='register'),
-    path('llogout', views.logout_f, name="llogout")
+    path('logout', views.logout_f, name="logout"),
+    
 ]
 
