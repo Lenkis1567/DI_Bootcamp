@@ -36,19 +36,22 @@ while (people[i] != "Jason") {
 let colors = ['red', 'blue', 'white', 'black', 'green']
 let suff=['st', 'nd', 'rd', 'th', 'th', 'th']
 
-=================================================//
+//=================================================//
 for (let i=0; i<colors.length; i++) {
-console.log('M
-do {
-let user_numb = prompt('what is the number?');
-var user_numb_num = Number(user_numb)} while (user_numb_num< 10)
+console.log('My ' + i + suff[i] + ' choice is '+ colors[i] )}
+//=================================================//
+do
+{let user_numb = prompt('what is the number?');
+var user_numb_num = Number(user_numb)} 
+
+while (user_numb_num< 10)
 
 
-or//
-let user_numb
+// or//
+let users_numb
 do {
-    user_numb = prompt('what is the number?')} while (Number(user_numb)< 10)
-=============================================//
+    users_numb = prompt('what is the number?')} while (Number(user_numb)< 10)
+//=============================================//
 
 const building = {
     numberOfFloors: 4,
@@ -80,7 +83,7 @@ if (rent_s+rent_dav>rent_d){
 
 console.log(rent_d)
 
-========================//
+//========================//
 
 family = {'mother': "Taty",
         'father': 'Serg',
@@ -88,7 +91,7 @@ family = {'mother': "Taty",
         'grandchild': 'Dan'}
 
 for (let i in family) {console.log (i, family [i])};
-===============================================================
+//===============================================================//
 
 const details = {
     my: 'name',
@@ -98,7 +101,7 @@ const details = {
   let a =""
   for (let i in details) {a = a+ " " +i+" "+ details[i]};
   console.log(a)
-==============================================================
+//==============================================================//
 
 const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
 let names_l=[]
