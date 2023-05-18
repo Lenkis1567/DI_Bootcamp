@@ -35,3 +35,17 @@ function equal(){
       
 }
 
+
+const clearButton = document.getElementById('clearButton');
+
+clearButton.addEventListener('click', function() {
+    windowElement.textContent = '';
+});
+
+const resetButton = document.getElementById('resetButton');
+resetButton.addEventListener('click', function() {
+    windowElement.textContent = '';
+    number_tocalc='',
+    number_tocalc_n=[]
+});
+
