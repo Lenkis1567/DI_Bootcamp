@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+        p {
+          background: yellow;
+          color: red;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="container"></div>
+        <button id="clear">Clear Interval</button>
+
+        
+        
+        <script>
+        
+       
+// setTimeout(function() {
+//   alert("Hello World");
+// }, 2000);
+
+div=document.getElementById('container');
+// setTimeout(function() {
+// let p = document.createElement('p')
+// p.textContent='Hello World'
+// div.appendChild(p)}, 2000)
+
+// setInterval(function() {
+
+//   let parr = document.createElement('p');
+//   parr.textContent = 'Hello World';
+//   container.appendChild(parr);
+// }, 2000);
+
+
+// let intervalId;
+
+// function addPar() {
+
+//  let par1 = document.createElement('p');
+//  par1.textContent = 'Hello World';
+//   container.appendChild(par1);
+
+// }
+
+// function startInterval() {
+//   intervalId = setInterval(addPar, 2000);
+// }
+
+// function clearIntervalHandler() {
+//   clearInterval(intervalId);
+// }
+
+// document.getElementById('clear').addEventListener('click', clearIntervalHandler);
+
+// startInterval();
+
+
+var interId;
+
+function addParagraph1() {
+;
+  let pa = document.createElement('p');
+  pa.textContent = 'Hello World';
+  container.appendChild(pa);
+
+  if (container.getElementsByTagName('p').length === 5) {
+    clearInterval(intervalId);
+  }
+}
+
+function startInterval() {
+  intervalId = setInterval(addParagraph1, 2000);
+}
+
+startInterval();
+
+
+
+
+        
+ </script>
+    </body>
+    </html>
