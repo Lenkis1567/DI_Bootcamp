@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+	<style>
+.outer {
+ width: 400px;
+ height: 400px;
+ position: relative;
+ background: yellow;
+}
+.inner{
+ width :50px;
+ height: 50px;
+ position: absolute;
+ left: 0;
+ top: 0;
+ background: red;
+}
+	</style>
+</head>
+<!-- 
+
+
+
+
+<table id='sampleTable' border="1"> 
+    <tr>
+        <td>Row1 cell1</td> 
+        <td>Row1 cell2</td>
+    </tr> 
+    <tr>
+        <td>Row2 cell1</td> 
+        <td>Row2 cell2</td>
+    </tr> 
+    </table>
+    
+    <input type="button" onclick="insertRow()" value="Insert row">  
+<div > </div>
+<div> </div>
+
+<body>
+
+<form onSubmit="handleSubmit(event)" name=form_one>
+        username:<input type="text" name="username" value="">
+        password:<input type="password" name="pass" value="">
+        <input type="submit" name="" value="Send"> <script src="lesson.js"></script>
+</form>-->
+
+
+
+
+    <div id="outer" class="outer">
+		<div id="inner" class="inner">
+		</div>
+	</div>
+    <input type="button" onclick="move()" value="move"> 
+    <input type="button" onclick="stop()" value="stop"> 
+    <script>
+
+let pos=0;
+let id;
+function move(){
+    let box = document.getElementById('inner');
+    console.log(box)
+    id=setInterval(function(){
+    if (pos >=350) {
+        clearInterval(id);
+    }
+    pos++;
+    box.style.left = pos+"px"; 
+  },5)
+    }
+function stop(){
+    clearInterval(id)
+}
+    </script>
+
+</body>
+</html>

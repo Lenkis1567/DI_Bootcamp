@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!-- <script>
+
+let word_reverse=''
+let phrase_reverse=''
+let a= 'asd sdfs fghe sdfsd'
+let a_words=a.split(' ')
+console.log (a_words)
+for (i of a_words) {
+    boo=i.split(' ');
+    console.log (boo);
+    for (b=boo.length; b>=0; --b) {
+    word_reverse=word_reverse+boo[b]
+    }
+    phrase_reverse=phrase_reverse+word_reverse
+}
+console.log (phrase_reverse)
+  </script>   -->
+
+  <script>
+
+function reverse_word(str){
+    let ret = '';
+    for (let i=str.length-1; i>=0; i--) {
+        ret=str[i]
+    }
+    return ret.join ('');
+}
+
+function reverse_all(str) {
+    let arr = str.split(' ')
+    arr.forEach(item, i, ret) => {
+        ret[i] = reverse_word(item)
+    });
+    return arr.join(' ')
+}
+  </script>
+
+<script>
+function(){
+    let name="Marry"
+    functiony(){
+        console.log(name)
+    }
+    return y
+}
+</script>
+
+
+
+
+</body>
+</html>
