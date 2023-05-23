@@ -24,3 +24,6 @@ const gameInfo = [
       items: ["book", "pen"]
     },
    ];
+   excl=forEach(gameInfo){
+
+   }

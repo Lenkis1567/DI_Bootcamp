@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let a=[1, 2, 3, 4]
+
+// a.forEach(item, i, a)=> a[i]=item*2
+
+
+
+// function map(a) {
+//     a.forEach((item, i, a) => {
+//         a[i]=item*2  
+//     }); 
+// return arr
+// }
+// console.log(a)
+
+// let newArr=arr.map(item)=>{
+//     if (item!==2) {
+//         return item*2}
+//     }
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// const filteredNumbers = numbers.map((number) => {
+//   if (number > 3) {
+//     return number;
+//   }
+// });
+
+// console.log(filteredNumbers);
+
+// let arr=[1,2,5,2,6]
+// function filter(arr){
+//     let ret=[]
+//     arr.forEach((item, i) => {
+//         if (item>3){
+//             ret.push(item)
+//         }
+//     })
+//     return ret;
+// }
+// let filterArr=arr.filter((item)=>{
+//     return item>3
+// })
+// console.log (filterArr)
+
+
+
+// let arr=[
+//     {name: "Jogn", username: "fghfg"},
+//     {name: "Jon", username: "jjjj"},
+//     {name: "Marry", username: "xxcvd"},
+//     {name: "jon", username: "jjjj"},
+// ]
+// let fil=arr.filter((item)=>{
+//     return item.name.toLowerCase().startsWith('jo')
+//     return item.name.toLowerCase().includes('a')
+// })
+
+
+arr_num=[1,4,2,6]
+// let summ=arr_num.reduce(total, item)=>{
+// return total+item
+// }
+
+// let sum = 0;
+// function calculateDigitSum(number) {
+  
+//   if (sum>9) {
+//   const digits = Math.abs(number).toString().split('').map(Number);
+//   for (let digit of digits) {
+//     sum += digit;
+//   }}
+//   else return sum
+// }
+
+// const number = 12345;
+// const digitSum = calculateDigitSum(number);
+
+// console.log(digitSum);
+
+function calcDigit(num){
+    let arr= new String(num).split('');
+    let sumOfDigit = arr.reduce((total, num)=> {
+        return total+Number(num);
+    }, 0)
+return (sumOfDigit<10) ? sumOfDigit: calcDigit(sumOfDigit)
+}
+console.log(calcDigit(15))
+
+    </script>
+</body>
+</html>
