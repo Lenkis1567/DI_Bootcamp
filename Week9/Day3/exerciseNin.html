@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+const data = [
+  {
+    name: 'Butters',
+    age: 3,
+    type: 'dog'
+  },
+   {
+    name: 'Cuty',
+    age: 5,
+    type: 'rabbit'
+  },
+  {
+    name: 'Lizzy',
+    age: 6,
+    type: 'dog'
+  },
+  {
+    name: 'Red',
+    age: 1,
+    type: 'cat'
+  },
+  {
+    name: 'Joey',
+    age: 3,
+    type: 'dog'
+  },
+  {
+    name: 'Rex',
+    age: 10,
+    type: 'dog'
+  },
+];
+let sum=data.reduce((accum, curr) => {
+    if (curr.type==="dog") {
+        return accum+curr.age*7;
+    }
+        return accum;}, 0)
+console.log(sum)
+
+
+
+const userEmail3 = ' cannotfillemailformcorrectly@gmail.com '
+console.log(userEmail3.trim())
+// ==========================================
+
+const users = [{ firstName: 'Bradley', lastName: 'Bouley', role: 'Full Stack Resident' },
+             { firstName: 'Chloe', lastName: 'Alnaji', role: 'Full Stack Resident' },
+             { firstName: 'Jonathan', lastName: 'Baughn', role: 'Enterprise Instructor' },
+             { firstName: 'Michael', lastName: 'Herman', role: 'Lead Instructor' },
+             { firstName: 'Robert', lastName: 'Hajek', role: 'Full Stack Resident' },
+             { firstName: 'Wes', lastName: 'Reid', role: 'Instructor'},
+             { firstName: 'Zach', lastName: 'Klabunde', role: 'Instructor'}];
+let newusers=[]        
+for (let user of users) {
+newusers.push({ [user.firstName+ " " +user.lastName]: user.role});
+}
+
+console.log(newusers)
+//              ==============================Exercise 4 : Array to Object=================
+
+
+
+ letters = ['x', 'y', 'z', 'z'];
+ const out = {};
+ i=0
+ 
+for (letter in letters) {
+    if (out.hasOwnProperty(letter)){
+        i++;}
+        out[letter]=i}
+    
+    
+    console.log(out)
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
