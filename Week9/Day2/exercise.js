@@ -77,11 +77,11 @@
 //   const experiencePoints = winBattle() ? 10 : 1;
 //   console.log(experiencePoints);
 // ====================================3=======
-const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"]
+// const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"]
 
-let viol=colors.some((item)=> item ==="Violet");
-if (viol) {
-    console.log ("yeah")} 
+// let viol=colors.some((item)=> item ==="Violet");
+// if (viol) {
+//     console.log ("yeah")} 
 
 
 
