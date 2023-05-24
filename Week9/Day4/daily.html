@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+class Video{
+            constructor(title, uploader, time){
+            this.title=title;
+            this.uploader=uploader;
+            this.time=time}
+            watch() {
+                console.log(`${this.uploader} watched all ${this.time} secs of ${this.title} !`)
+            }
+}
+        
+let video1 = new Video('101 dalmatian', 'Mik', 256)
+let video2 = new Video('102 dalmatian', 'Mik1', 257)
+
+video1.watch()
+video2.watch()
+
+let videosInfo=[['103 dalmatian', 'Mik2', 258], ['104 dalmatian', 'Mik3', 259], ['105 dalmatian', 'Mik4', 260]]
+let arr_video = []
+
+for(let video of videosInfo) {
+   let videonew= new Video(video[0], video[1], video[2])
+   arr_video.push(videonew) 
+}
+console.log(arr_video)
+
+
+
+    </script>
+</body>
+</html>
