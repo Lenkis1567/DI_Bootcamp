@@ -1,0 +1,95 @@
+/* font-family: 'SEGA LOGO FONT', sans-serif; */
+body {margin:0; 
+    padding:0
+
+}
+.navbar {
+    background-image: url("circuit-pattern.png");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: rgba(16, 185, 81, 0.5); 
+  }
+
+
+  .left,
+.right {
+  flex: 1;
+  height: 100%; 
+  font-family: 'SEGA LOGO FONT', sans-serif;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.middle {
+  flex: 2;
+  height: 100%; 
+  display: flex;
+  align-items: center;
+}
+
+#searchInput {
+    padding: 5px;
+    width: 100%;
+  }
+
+.cards {
+    background-image: url("card-pattern.png");
+    background-color: rgba(75, 17, 168, 0.5); 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-auto-rows: 280px;
+    gap: 10px; 
+    padding: 30px;
+    justify-content: center;
+   
+}
+
+  
+  .card {
+    background-color: #1ba4ad;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  .upper-square {
+
+    height: 100px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+  }
+  
+  .rest-of-space {
+    height: 80px;
+    
+  }
+
+  .round {
+    border-radius: 50%;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    background-color: rgba(75, 17, 168, 0.5); 
+    align-items: center;
+
+  }
+.name {
+    font-family: 'SEGA LOGO FONT', sans-serif;
+    font-size: 12px;
+    font-weight: semi-bold;
+    }
+.email{
+    font-family: 'SEGA LOGO FONT', sans-serif;
+    font-size: 8px;
+
+}
