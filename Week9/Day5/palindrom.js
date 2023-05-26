@@ -27,7 +27,6 @@
 
 // second version
 
-
 let string1 = prompt('Input the first string');
 let string2 = prompt('Input the second string');
 
