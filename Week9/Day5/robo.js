@@ -102,10 +102,6 @@ const robots = [
 
 
 
-
-
-
-
 // const root = document.getElementById('root');
 
 // const render = (arr) => {
