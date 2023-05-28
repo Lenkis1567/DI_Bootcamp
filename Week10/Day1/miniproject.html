@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mini.css">
+    <title>Mini project</title>
+</head>
+<body>
+    <div class="container1">
+        <div class="container">
+            <div class="card">
+                <div class="innercard">
+                <button type="send"> Generate Quote </button>
+                <div id="quote"> 
+
+                </div>
+                <div id="author"> 
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<form method="GET" id="newquote">
+    <input type=text name="author" placeholder="Author">
+    <textarea name="quote" placeholder="Quote"></textarea>
+    <button type="submit" id="submit"> Submit</button>
+    </form>
+        <script>
+       const quotes = [
+ { id: 0, author: 'Albert Einstein', quote: 'Try not to  become a man of success, but rather try to become a man of value.' },
+  { id: 1, author: 'Ralph Waldo Emerson', quote: 'Men are what their mothers made them.' },
+  { id: 2, author: 'Abraham Lincoln', quote: 'Nearly all men can stand adversity, but if you want to test a man\'s character, give him power.' },
+  { id: 3, author: 'George Bernard Shaw', quote: 'A gentleman is one who puts more into the world than he takes out.' },
+  { id: 4, author: 'Thomas Edison', quote: 'Opportunity is missed by most people because it is dressed in overalls and looks like work.' },
+
+];    
+numbers=[]
+function getRandomNumber(min, max) {
+  res=Math.floor(Math.random() * (max - min + 1)) + min;
+  if (!numbers.includes(res)) {
+    return res}
+else return getRandomNumber(min, max)
+  }
+
+let button=document.querySelector('button')
+button.addEventListener('click', () => {
+    let max=quotes.length-1;
+    let number=getRandomNumber(0, max);
+    let quote=quotes[number];
+    numbers[0]=number;
+    let divQ=document.querySelector('#quote')
+    let divA=document.querySelector('#author')
+
+    divQ.innerText=quote.quote
+    divA.innerText=quote.author
+    console.log(quote)
+   
+}
+);
+let form=document.getElementById('newquote')
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(form);
+    const newAuthor = formData.get('author');
+    const quote = formData.get('quote');
+    let newQ={id:quotes.length,
+    author: newAuthor,
+quote: quote};
+quotes.push(newQ)
+console.log(quotes)
+})
+
+</script>
+</body>
+</html>
