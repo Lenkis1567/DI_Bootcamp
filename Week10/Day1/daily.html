@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily</title>
+</head>
+<body>
+    <form method="GET">
+        <input type="text" name="name"  placeholder="name" >
+        <input type="text" name="familyname"  placeholder="family name" >
+        <button type="submit">Send</button>
+    </form>
+    <div id = 'data'> </div>
+    <script> 
+    let form=document.forms[0]
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+    const name=form.elements['name'].value
+    const familyname=form.elements['familyname'].value;
+    targetDiv=document.querySelector('#data')
+    const data={
+        'name': name,
+        'familyname': familyname
+    }
+    let jsdata=JSON.stringify(data, null, 2)
+    targetDiv.innerHTML = jsdata
+})
+
+
+    </script>
+</body>
+</html>
