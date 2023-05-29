@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily</title>
+</head>
+<body>
+    <div id="translation">
+
+
+    </div>
+ <script>
+// function makeAllCaps(a) {
+//   return new Promise((resolve, reject) => {
+//     if (a.every((word) => typeof word === "string")) {
+//       resolve(a.map((word) => word.toUpperCase()));
+//     } else {
+//       reject("Not all elements are strings");
+//     }
+//   });
+// }
+
+// function sortWords(a){
+//     return new Promise((resolve, reject)=>{
+//         if (a.length>4) {
+//             resolve (a.sort())
+//         }
+//         else{
+//             reject('the length is smaller than 4')
+//         }
+//     })
+// }
+
+// makeAllCaps([1, "pear", "banana"])
+//       .then((arr) => sortWords(arr))
+//       .then((result) => console.log(result))
+//       .catch(error => console.log(error))
+
+//       makeAllCaps(["apple", "pear", "banana"])
+//       .then((arr) => sortWords(arr))
+//       .then((result) => console.log(result))
+//       .catch(error => console.log(error))
+
+//       makeAllCaps(["apple", "pear", "banana", "melon", "kiwi"])
+//       .then((arr) => sortWords(arr))
+//       .then((result) => console.log(result)) 
+//       .catch(error => console.log(error))
+// =====================================================makeAllCaps
+
+const morse = `{
+  "0": "-----",
+  "1": ".----",
+  "2": "..---",
+  "3": "...--",
+  "4": "....-",
+  "5": ".....",
+  "6": "-....",
+  "7": "--...",
+  "8": "---..",
+  "9": "----.",
+  "a": ".-",
+  "b": "-...",
+  "c": "-.-.",
+  "d": "-..",
+  "e": ".",
+  "f": "..-.",
+  "g": "--.",
+  "h": "....",
+  "i": "..",
+  "j": ".---",
+  "k": "-.-",
+  "l": ".-..",
+  "m": "--",
+  "n": "-.",
+  "o": "---",
+  "p": ".--.",
+  "q": "--.-",
+  "r": ".-.",
+  "s": "...",
+  "t": "-",
+  "u": "..-",
+  "v": "...-",
+  "w": ".--",
+  "x": "-..-",
+  "y": "-.--",
+  "z": "--..",
+  ".": ".-.-.-",
+  ",": "--..--",
+  "?": "..--..",
+  "!": "-.-.--",
+  "-": "-....-",
+  "/": "-..-.",
+  "@": ".--.-.",
+  "(": "-.--.",
+  ")": "-.--.-"
+}`
+
+function toJs(x) {
+  return new Promise((resolve, reject) => {
+    if (Object.keys(x).length !== 0) {
+      resolve(JSON.parse(x));
+    } else {
+      reject(Error("The object is empty"));
+    }
+  });
+}
+
+function morseJS(morseObj) {
+  return new Promise((resolve, reject) => {
+    const sentence = prompt("Input a word or sentence");
+    const sentenceWithoutSpaces = sentence.split(" ").join("");
+    
+    if ([...sentenceWithoutSpaces].every((symbol) => morseObj.hasOwnProperty(symbol))) {
+      resolve([...sentenceWithoutSpaces].map((char) => morseObj[char]).join('\n\n'));
+ 
+    } else {
+      reject("No Morse code mapping found for some symbols");
+    }
+  });
+}
+
+function joinWords(morseTranslation) {
+  const translationDiv = document.getElementById("translation");
+  const lines = morseTranslation.split("\n");
+  const paragraphs = lines.map((line) => `<p>${line}</p>`);
+  translationDiv.innerHTML = paragraphs.join("");
+}
+
+toJs(morse)
+  .then((morseObj) => morseJS(morseObj))
+  .then((morseTranslation) => joinWords(morseTranslation))
+  .catch((error) => console.error(error));
+
+ </script>   
+</body>
+</html>
+

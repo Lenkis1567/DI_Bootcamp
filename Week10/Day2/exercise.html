@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise</title>
+</head>
+<body>
+    <script>
+
+function compareToTen(num) {
+    let comp = new Promise((resolve, reject)=>{
+    if (num<10) {
+        resolve('the argument is less than 10')
+    }
+else {
+    reject('argument is greater than 10')
+}}
+    ); return comp
+}
+
+function delay() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("success");
+    }, 4000);
+  });
+
+}
+
+compareToTen(15)
+  .then(result => console.log(result))
+  .catch(error => console.log(error))
+
+  compareToTen(8)
+  .then(result => console.log(result))
+  .catch(error => console.log(error))
+// ================combined===========
+
+  function compareToTen(num) {
+  return Promise.resolve(num < 10 ? "the argument is less than 10" : console.log("success"));
+}
+
+// Usage:
+compareToTen(7)
+  .then((result) => {
+    console.log(result); 
+  })
+  .catch((error) => {
+    console.log("Oops, something went wrong"); 
+  });
+
+// =============Exercise 3 : Resolve & Reject============
+
+let new1 = new Promise((resolve, reject)=>{
+    resolve(3)
+})
+const new1a  = Promise.resolve(3);
+
+const new2 = Promise.reject("Boo!");
+
+new1.then((result) => {
+  console.log(result); 
+});
+
+new2.catch((error) => {
+  console.log(error); 
+});
+ 
+
+    </script>
+</body>
+</html>
+
