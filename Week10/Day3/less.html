@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// let arr=[]
+// function fib(x){
+//         if (x===0) {
+//             arr = [1];
+//         } else if (x===1) {
+//             arr=[1, 1]}
+//         else {
+//         for (let i =2; i <=x; i++){
+//    arr.push(fib(i-1)+fib(i-2))};}
+// return arr}
+
+//     console.log(fib(8))
+
+
+    
+function fib(x) {
+  if (x === 0) {
+    arr = [0];
+  } else if (x === 1) {
+    arr = [0, 1];
+  } else {
+    arr = [0, 1];
+    for (let i = 2; i <= x; i++) {
+      arr.push(arr[i - 1] + arr[i - 2]);
+    }
+  }
+  return arr;
+}
+function fibAdd(x) {
+    arr=fib(x)
+    sum=arr.reduce((accumulator, currentValue)=>accumulator + currentValue, 0);
+    return sum;
+}
+
+console.log(fibAdd(8))
+console.log(fib(8))
+
+    </script>
+</body>
+</html>
