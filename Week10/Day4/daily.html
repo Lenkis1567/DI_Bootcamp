@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styleD.css">
+    <link href="https://fonts.googleapis.com/css2?family=Meddon&family=Over+the+Rainbow&family=Roboto+Slab&display=swap" rel="stylesheet"> 
+    <title>Exchange</title>
+</head>
+<body>
+    <div class="info-container">
+        <h1> Currency converter</h>
+        <p> From: </p>
+        <form>
+            <label for="select">Select currency:</label>
+            <select id="select" name="selectA"></select>
+          </form>
+          
+        <p> To: </p>
+
+        <form>
+            <label for="select1">Select currency:</label>
+            <select id="select1" name="selectB"></select>
+          </form>
+
+        <p> Amount: </p>
+        <form>
+            <input id="amount" name="amount"></select>
+            <button type="submit" onclick="convert(event)">Convert</button>
+
+          </form>
+          <form>        
+            <input id="result" name="result" type="text" readonly>
+          </form>
+     <img id="bonus" src="bonus.png" width="50px" alt="change">     
+     
+    </div>
+
+<script>
+
+fetch('https://v6.exchangerate-api.com/v6/083d0a3e64e5e73998d0e3ae/codes')
+  .then(response => response.json())
+  .then(data => {
+    data.supported_codes.forEach((codeValue) => {
+      const selectElement = document.getElementById('select');
+      const selectElement2 = document.getElementById('select1');
+      const [code, value] = codeValue;
+      const option1 = document.createElement('option');
+      option1.value = code;
+      option1.text = value;
+      selectElement.appendChild(option1);
+      const option2 = document.createElement('option');
+      option2.value = code;
+      option2.text = value;
+      selectElement2.appendChild(option2);
+    });
+  })
+  .catch(error => console.error(error));
+
+  function changeIt(event) {
+    let form1 = document.getElementById('select');
+    let form2 = document.getElementById('select1');
+    let a = form1.value;
+    let b = form2.value;
+    form1.value = b;
+    form2.value = a;
+  }
+
+let change = document.querySelector('img');
+change.addEventListener('click', changeIt);
+
+function convert(event){
+event.preventDefault();
+let form1 = document.getElementById('select');
+let form2 = document.getElementById('select1');    
+let a = form1.value;
+let b = form2.value;
+let amount = document.getElementById('amount').value;
+fetch('https://v6.exchangerate-api.com/v6/083d0a3e64e5e73998d0e3ae/pair/' + a + '/' + b)
+.then(res => res.json())
+.then(data => {
+    let result = document.getElementById('result');
+        let sum = amount * data.conversion_rate;
+        result.value = sum;
+      })
+.catch(err => console.error(err));
+let change=document.querySelector('img');
+change.addEventListener('click', changeIt);
+
+}
+
+</script>
+</body>
+</html>
