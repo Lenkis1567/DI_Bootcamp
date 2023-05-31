@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>StarWars</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="logo"> Star wars</div>
+		<div class="info-container">
+			<h1 id="name"></h1>
+			<p id="height"></p>
+			<p id="gender"></p>
+			<p id="birth-year"></p>
+			<p id="home-world"></p>
+		</div>
+		<button type="button" id="button" name="button" onclick="searchPers(event)">Find Someone</button>
+	</div>
+      
+<script>
+
+
+function searchPers(event){
+event.preventDefault();
+let  hName=document.querySelector('#name')
+hName.innerText="loading..."
+let pHeight=document.querySelector('#height')
+pHeight.innerHTML = `
+    <div class="fa-3x">
+      <i class="fas fa-spinner fa-spin"></i>
+    </div>
+  `
+let  pGender=document.querySelector('#gender')
+pGender.innerText=''
+  let  pbirth=document.querySelector('#birth-year')
+  pbirth.innerText=''
+let  pHome=document.querySelector('#home-world')
+pHome.innerText =''
+
+let rand=Math.floor(Math.random() * 83);
+fetch('https://www.swapi.tech/api/people/'+rand)
+.then(res => res.json())
+.then(data => {funcPR(data);})
+.catch(err => console.error(err))
+}
+
+
+
+function funcPR(d) {
+  hName=document.querySelector('#name')
+  hName.innerText=d.result.properties.name
+  let pHeight=document.querySelector('#height')
+  pHeight.innerText=d.result.properties.height
+  let  pGender=document.querySelector('#gender')
+  pGender.innerText=d.result.properties.gender
+  let  pbirth=document.querySelector('#birth-year')
+  pbirth.innerText=d.result.properties.birth_year
+  let  pHome=document.querySelector('#home-world')
+  linkPlanet=d.result.properties.homeworld
+  fetch(linkPlanet)
+    .then(res => res.json())
+    .then(data => {
+      pHome.innerText = data.result.properties.name;
+    })
+    .catch(err => console.error(err));
+}
+
+
+
+
+</script>
+
+</body>
+</html>
