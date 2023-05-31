@@ -12,24 +12,29 @@
         <div class="container">
             <div class="card">
                 <div class="innercard">
-                <button type="send"> Generate Quote </button>
-                <div id="quote"> 
-
-                </div>
-                <div id="author"> 
-
-                </div>
+                    <button type="submit" id="send"> Generate Quote </button>
+                    <div id="quote"> </div>
+                    <div id="author"> </div>
+                                    </div>
+                   
             </div>
+             <div class="innerinput">
+                <button type="submit" id="submitQ"> Quantity</button>
+                <button type="submit" id="submitQ"> Quantity+S</button>
+                <button type="submit" id="submitQ"> Words</button>
+                <button type="submit" id="submitQ"> Like</button>
+                <div id="unswer"></div>
+                    </div>
+
         </div>
     </div>
-</div>
 <div class="add">
 <form method="GET" id="newquote">
     <input type=text name="author" placeholder="Author">
     <textarea name="quote" placeholder="Quote"></textarea>
     <button type="submit" id="submit"> Submit</button>
     </form>
-    </div>
+</div>
         <script>
        const quotes = [
  { id: 0, author: 'Albert Einstein', quote: 'Try not to  become a man of success, but rather try to become a man of value.' },

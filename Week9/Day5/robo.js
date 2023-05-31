@@ -72,7 +72,7 @@ const robots = [
     ];
 
     const searchInput = document.getElementById('searchInput');
-    const cardsContainer = document.querySelector('.cards'); // Assuming you have a container element with class "cards"
+    const cardsContainer = document.querySelector('.cards'); 
     
     searchInput.addEventListener('input', function(event) {
       const searchQuery = event.target.value.toLowerCase();
