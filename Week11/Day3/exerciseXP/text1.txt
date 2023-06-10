@@ -1,0 +1,4 @@
+Here was only this text.
+SyncText added. Async text added. SyncText added.
+Async text added. SyncText added.
+Async text added.
