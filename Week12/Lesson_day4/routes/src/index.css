@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+}
+
+.output {
+  background-color: #1e5555;
+  color: #fff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+p {
+  display: flex;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  display: 'flex';
+  flex-direction: column;
+  margin: 3px;
+  padding: 4px;
+  font-style: italic;
+}
+
+.entered-info p {
+  font-size: 18px;
+  margin-left: 20px;
+  font-style: oblique;
+}
+
+
+.entered-info {
+  background-color: #1e5555;
+  color: #fff;
+}
+
+
+.entered-info h2 {
+  margin: 10px;
+  padding: 10px;
+  font-weight: 650;
+}
+
+h1 {
+  background-color: #3b3636;
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+}
+
+div {
+  display: block;
+}
+
+main {
+  display: 'flex';
+  flex-direction: 'column'
+}
+
+inputForm {
+  display: 'flex';
+  flex-direction: 'column';
+  background-color: #deb887;
+  margin: 0;
+}
+
+form {
+  display: 'flex';
+  flex-direction: 'column'
+  
+}
+
+.text {
+    margin: 8px 0 8px 10px;
+    width: 50%;
+    border-radius: 3px;
+    height: 25px;
+    font-weight: 700;
+}
+
+.radiobutton {
+  margin-left: 10px;
+  height: 20px;
+}
+
+input {
+  display: 'flex';
+  flex-direction: column;
+  background-color: #f87994;
+}
+
+p {
+  display: 'flex';
+  flex-direction: column;
+  margin: 3px;
+  padding: 4px;
+  font-style: italic;
+}
