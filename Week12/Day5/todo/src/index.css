@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family:    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #eee;
+  display: block;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 10px 20px;
+}
+
+h1 {
+  font-size: 4.2rem;
+  line-height: 110%;
+  margin: 2.8rem 0 1.68rem 0;
+  text-align: center;
+  color: #2196F3 !important;
+}
+
+.alltodos {
+    margin: .5rem 0 1rem 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+.onetodo {
+    background-color: #fff;
+    line-height: 1.5rem;
+    padding: 10px 20px;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+    text-align:start
+}
+
+form {
+  margin: 20px 10px;
+  text-align:start
+}
+
+
+label {
+  font-size: .8rem;
+  color: #9e9e9e;
+  text-align:start
+  
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #9e9e9e;
+  border-radius: 0;
+  outline: none;
+  height: 3rem;
+  width: 100%;
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+
+div {
+  display: block;
+}
+
+span {
+  font-size: 15px;
+}
+
+
+
+.collection-item span:hover{
+  cursor: pointer;
+  text-decoration: line-through;
+}
+
+
