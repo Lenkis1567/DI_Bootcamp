@@ -43,6 +43,7 @@ class Heroapp extends React.Component {
         const updatedSuperheroes = [...superheroes];
         const clickedSuperheroIndex = updatedSuperheroes.findIndex(
           (hero) => hero === clickedSuperhero
+          
         );
         updatedSuperheroes[clickedSuperheroIndex] = clickedSuperheroNew;
         const shuffledSuperheroes = updatedSuperheroes.sort(() => Math.random() - 0.5);
@@ -52,7 +53,7 @@ class Heroapp extends React.Component {
           clickedSuperhero: clickedSuperheroNew,
         });
       };
-      
+
     render () {
         const { superheroes } = this.state;
         return(
