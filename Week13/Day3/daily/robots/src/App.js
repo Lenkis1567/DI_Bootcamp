@@ -25,7 +25,6 @@ class App extends Component {
     fetch('https://jsonplaceholder.typicode.com/users')
     .then((res)=>res.json())
     .then(users=>this.setState({users: users}))
-    .then (() => this.props.dispatch({type: 'LOADING_FINISH'}))
     .catch(e=>console.log(e))
   }
   

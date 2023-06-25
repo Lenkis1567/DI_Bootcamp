@@ -1,26 +1,18 @@
-import { applyMiddleware, combineReducers, createStore } from 'redux';
-import thunk from 'redux-thunk';
+import { combineReducers, createStore } from 'redux';
 
 function searchReducer(state=[], action={}){
-   if (action.type==="SEARCH_ROBOT") {
+  console.log('action', action)
+  if (action.type==="SEARCH_ROBOT") {
     return action.payload
   }
   return state
 }
 
-const loadingReducer = (state = true, action) => {
-  if (action.type==='LOADING_START') return true
-  if (action.type==='LOADING_FINISH') return false
-  if (action.type==="SEARCH_ROBOT") return false
-  return state
-}
-
 const rootReducer = combineReducers({
-  searchTerm: searchReducer,
-  loading: loadingReducer
+  searchTerm: searchReducer
  })
 
- export const store = createStore(rootReducer, applyMiddleware(thunk))
+ export const store = createStore(rootReducer)
  store.subscribe(()=> console.log('store get state', store.getState()))
 
   // export const reducer = (state = initState, action={}) => {

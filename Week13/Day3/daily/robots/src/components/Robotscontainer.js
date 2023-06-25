@@ -11,7 +11,6 @@ class Robotcontainer extends React.Component {
     return (
         <>
             <div className="robots">
-                {this.props.loading&&<h1>LOADING</h1>}
                 <div>
                 {this.props.users
                     .filter((user) => user.name.toLowerCase().includes(this.props.searchTerm || ''))
