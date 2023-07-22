@@ -1,0 +1,38 @@
+body {
+    padding:0; 
+    margin:0;
+}
+.banner{
+    background-image: url('gr.jpg'); 
+    color: white; 
+    padding-bottom: 80px;
+}
+
+.bannertext {
+    padding-top:80px
+}
+
+.text-break {
+    padding: 30px
+}
+
+.features {
+    padding-top:80px;
+}
+
+.feature {
+    padding: 10px 0; 
+    margin: 10px
+}
+
+p {
+    font-size: 12px;
+}
+
+img {
+    margin-bottom:15px;
+}
+
+.form-control {
+    margin-bottom: 15px
+}
