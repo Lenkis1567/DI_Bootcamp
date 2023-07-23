@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;;
+}
+.container{
+    display: flex; 
+    justify-content: center; 
+    padding:0 40px;
+}
+
+.left, .right {
+    display: flex; text-align:center;
+     width:49%;
+     justify-content: center;  
+     flex-direction:column
+}
+.textWithLines {
+display:inline-block;
+}
+
+.form {
+    display: flex; 
+    flex-direction:column; 
+    margin-left:45px; 
+    margin-right:45px"
+}
+
+.textWithLines {
+    margin-top: 20px; 
+    color: grey;
+}
+.textWithLines::before,
+.textWithLines::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background: #ccc;
+  display: inline-block;
+  margin: 0 .5em .25em;
+}
+.right{
+   
+	background: -webkit-linear-gradient(top left, #191A1B, #7b0f96);
+	background: -moz-linear-gradient(top left, #191A1B, #7b0f96);
+	background: linear-gradient(to bottom right, #191A1B, #7b0f96);
+}
+h1 {
+    padding-top:60px
+}
+
+.social {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 20px
+}
+
+.LOG {
+    background-color: blueviolet; 
+    color:white; 
+    text-align: center; 
+    padding: 3px; 
+    margin-bottom: 15px;
+    margin-top:40px
+}
+footer {
+    color: rgb(63, 62, 62);
+    font-size: 14px;
+    margin-top:40px
+}
+
+.logo {
+    height: 20px;
+    padding-right:20px
+}
+
+.h1right {
+    color:white;
+    padding: 5px 0 0 0;
+    margin: 0
+}
+
+p {
+    margin: 5px 40px; 
+    color:white
+}
+
+.register {
+color:white; 
+font-weight: 400; 
+margin-top:20px; 
+margin-left: 100px; 
+margin-right: 100px; 
+padding:12px; 
+border: 1px solid white; 
+border-radius: 20px;
+font-size: 12px;
+}
+
+.user-pluss{
+    color: white; 
+    font-size: 80px; 
+    padding:0
+}
+
+.hello {
+    color:white
+}
+
+.form{
+    display: flex; 
+    flex-direction:column; 
+    margin-left:45px; 
+    margin-right:45px  
+}
+
+.formfields{
+    margin-bottom: 15px; 
+    border: none; 
+    padding:5px; 
+    background-color: rgb(163, 156, 156);
+}
+
+.rem-pas {
+   display: flex; 
+   align-items: flex-end; 
+   color: grey; 
+   padding-top: 15px; 
+   padding-bottom: 15px;
+}
+.fa-solid {
+    color: #ffffff;
+}
+
+.label {
+    padding-right: 15px; 
+    color: grey
+}
+
+.pass {
+    color: grey; 
+    text-decoration: none; 
+    margin-left: auto;
+}
