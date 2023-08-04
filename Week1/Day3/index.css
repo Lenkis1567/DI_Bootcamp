@@ -1,0 +1,140 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative; 
+  }
+  
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('map.jpg');
+    background-size: cover;
+    opacity: 0.1; 
+    z-index: -1; 
+  }
+
+.container{
+    width:80%;
+}
+h1 {
+    font-size: 36px;
+    color:black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 20px ;
+   
+}
+.containerreviews{
+    display: grid;
+    grid-template-columns: repeat(3, 28%);
+    grid-gap: 40px;
+    height:300px;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.containergrid {
+    display: grid;
+    width:100%;
+    grid-template-columns: repeat(3, 28%);
+    grid-gap: 5px;
+    justify-content: space-evenly;
+}
+
+
+.numb {
+    text-align: center;
+}
+h3{
+    color:rgb(65, 28, 167);
+    text-align: center;
+    font-size: 36px;
+    padding: 10px;
+    margin: 0
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    color: grey;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.small {
+    text-transform: none;
+    color: white;
+    text-align: center;
+    padding-bottom:20px
+}
+
+
+.color {
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: auto;
+    border-radius: 8px;
+}
+
+.circle-image {
+    position: absolute;
+    top: calc(50% + 20px);  /* Position the picture in the center vertically */
+    left: 50%; /* Position the picture in the center horizontally */
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-image: url(face1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%; /* Make the picture a circle */
+    z-index: 1; /* Place the picture above the content */
+}
+
+.col {
+    border-radius: 0 0 8px 8px; 
+}
+.first {
+    align-self: start;
+}
+
+#second {
+    align-self: end;
+}
+.sec {
+    position: absolute;
+    top: calc(50% + 20px);  /* Position the picture in the center vertically */
+    left: 50%; /* Position the picture in the center horizontally */
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-image: url(face2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%; /* Make the picture a circle */
+    z-index: 1; /* Place the picture above the content */
+}
+
+#third {
+    align-self: center;
+}
+
+h6 {
+    padding-left: 10px;
+    padding-right: 6px;
+}
+.white {
+color: white;
+text-align: center;
+padding-top:30px;
+padding-bottom:0;
+margin-bottom:0
+}
