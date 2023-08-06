@@ -19,10 +19,18 @@ body {
     opacity: 0.8;  
   }
 
-  input, select {
+  input, select, label {
     border: none;
   }
 
   ul {
 padding-left: 20px
+  }
+
+  .checkbox {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    margin-top:20px
   }
