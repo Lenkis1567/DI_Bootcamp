@@ -1,0 +1,195 @@
+body {
+    padding: 0;
+    margin: 0;
+   background-color: rgb(223, 213, 213);
+   font-family: 'Lato', sans-serif;
+
+  }
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0px 2px 0px rgba(7, 58, 65, 0.767);
+  }
+.logo{
+    height:26px;
+    padding:5px;
+    margin-left:10px;
+}
+  .navbar-1 {
+display:flex;
+justify-content: flex-start;
+  }
+
+  .navbar-2 {
+    display:flex;
+    justify-content: flex-end;
+      }
+
+h3, h4 {
+    font-size: 16px;
+    color:rgba(20, 144, 160, 0.767);
+    padding:0;
+    margin: auto 10px
+}
+.navbar-1 h4:hover,
+.navbar-2 h4:hover {
+    color: rgb(12, 72, 107);
+}
+h3{
+    font-size: 18px;
+}
+.contence h3 {
+    color: black;
+    margin: 10px 0;
+    padding: 0;
+}
+h6 {
+    margin:0 0 20px 0;
+    padding:0
+}
+
+.contence button {
+    margin-top:20px
+}
+button {
+   width:100px;
+   height: 25px;
+    margin: auto 10px auto 0;
+    color: rgb(40, 148, 209);
+    border: 1px solid rgb(40, 148, 209);
+    border-radius: 2px;
+}
+
+button:hover{
+    color: rgb(12, 72, 107);
+    border: 1px solid rgb(12, 72, 107);
+} 
+
+#icon {
+    width:12px
+}
+
+.container {
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content: center;
+    align-items: enter;
+    flex-direction: column;
+}
+
+h1 {
+    margin-top: 40px;
+}
+h1, h5 { 
+    justify-content: center;
+    display: flex;
+}
+
+h5 {
+    font-size: 18px;
+    margin:10px
+}
+
+.pricing {
+    justify-content: center;
+    display: flex; 
+    color: rgba(20, 144, 160, 0.767);
+}
+label {
+    color:rgba(7, 58, 65, 0.767);
+    margin-right: 10px
+}
+option {
+    color: rgba(20, 144, 160, 0.767);
+    
+}
+select {
+    color: rgb(40, 148, 209);
+    border: 1px solid rgb(40, 148, 209);
+    border-radius: 2px;
+
+   
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.ticket {
+background-color: white;
+display: flex;
+flex-direction: column;
+margin: 20px 10px;
+border-radius:  5px 5px 0 0;
+
+}
+#popular {
+    background-color: rgb(40, 148, 209);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px ;
+    border-radius:   5px 5px 0 0;
+}
+
+.contence {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.images {
+    margin: 20px auto 10px auto;
+}
+
+p{
+   font-size: 16px; 
+}
+   span {
+    font-size: 36px; 
+   }
+
+   .trial {
+    padding: 5px 15px;
+    background-color: rgb(117, 178, 127);
+    border: 1px solid rgb(117, 178, 127);
+    color: white;
+    font-size: 12px;
+    margin: 5px 15px;
+    width: 180px
+   }
+   button {
+    margin: 5px 15px;
+   }
+
+   h6{
+    font-family: 'Comic Neue', cursive;
+    font-style: italic;
+   }
+
+   .features {
+    padding:0;
+    background-color: rgb(25, 84, 117);
+    color:white; 
+    font-size:10px
+   }
+
+   .features p {
+    margin: 10px;
+    font-size:12px
+   }
+
+   #title {
+    font-weight: 600;
+    margin-bottom:15px
+   }
+
+   a {
+    color:white;
+    text-decoration: none;
+   }
